@@ -1,16 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	padding: 0;
+	margin: 0;
+	color: #fff;
+	background-color: #1a1b1e;
+	overflow-x: hidden;
+	font-family: Open-Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+		Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
+	scrollbar-width: thin;
+	scrollbar-color: #aaaaaa inherit;
+}
+
+*::-webkit-scrollbar {
+	width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #1a1b1e;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #aaaaaa;
+	border-radius: 20px;
+	border: 1px solid #1a1b1e;
+}
+
+svg {
+	cursor: pointer;
 }

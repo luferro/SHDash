@@ -1,116 +1,337 @@
 .container {
-  padding: 0 2rem;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+}
+
+.header {
+	width: 100%;
+	position: sticky;
+	display: flex;
+	align-items: center;
+	background-color: #2c2e33;
+	padding: 5px 0;
+}
+
+.logo span {
+	color: #00adb5;
+	filter: brightness(1.5);
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 2rem;
+	width: 100%;
+}
+
+.login {
+	all: unset;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	border: 1px solid;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.user {
+	all: unset;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+.menu {
+	color: #ffffff;
+	background-color: #2c2e33;
+	border-color: #2c2e33;
+}
+
+.label,
+.item {
+	color: #ffffff;
+}
+
+.item:hover {
+	background-color: #1a1b1e;
+}
+
+.username {
+	all: unset;
+	display: flex;
+	padding: 15px 12px;
+}
+
+.username span {
+	font-weight: 700;
+}
+
+.danger {
+	color: #ff2400;
+	font-weight: 700;
+}
+
+.danger:hover {
+	color: #ff2400;
+	background-color: rgba(255, 245, 245, 1);
+}
+
+.modal {
+	background-color: #2c2e33;
+}
+
+.modal,
+.modal.form label,
+.modal.table td,
+.close {
+	color: #fff;
+}
+
+.modal .body {
+	overflow: auto;
+	word-break: inherit;
+}
+
+.modal.table {
+	max-width: 1200px;
+	width: 100%;
+}
+
+.modal.table td {
+	white-space: nowrap;
+}
+
+.modal.table .control {
+	overflow: initial;
+}
+
+.close:hover {
+	background-color: #2c2e33;
+}
+
+.pagination {
+	padding: 5px 0;
+}
+
+.pagination .active {
+	background-color: #00adb5;
+}
+
+.badge {
+	text-align: center;
+	border: 1px solid;
+	border-radius: 32px;
+	background-color: transparent;
+	height: 20px;
+	font-size: 11px;
+	line-height: 18px;
+	font-weight: 700;
+	letter-spacing: 0.25px;
+	cursor: pointer;
+}
+
+.badge:hover {
+	background-color: transparent;
 }
 
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	flex-grow: 1;
 }
 
 .footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 1rem 0;
 }
 
 .footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+	display: flex;
+	align-items: center;
+	color: #00adb5;
+	filter: brightness(1.5);
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.resources {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.resources p {
+	text-align: center;
+	margin: 0;
+	font-weight: 700;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.list {
+	display: flex;
+	max-width: 100%;
 }
 
-.title,
-.description {
-  text-align: center;
+.list > .column {
+	padding: 0 2rem;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.single {
+	max-width: 1200px;
+	width: 1200px;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.multiple {
+	max-width: 600px;
+	width: 600px;
 }
 
 .grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+	display: flex;
+	flex-direction: column;
 }
 
 .card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+	background-color: #2c2e33;
+	margin: 1rem 0;
+	padding: 1.5rem;
+	text-align: left;
+	color: inherit;
+	text-decoration: none;
+	border: 1px solid #2c2e33;
+	border-radius: 10px;
+	transition: color 0.15s ease, border-color 0.15s ease;
+	width: 100%;
+	word-wrap: break-word;
+	box-shadow: 1px 2px 3px 4px rgba(20, 20, 20, 0.4);
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.card:hover {
+	box-shadow: 1px 2px 3px 4px #00adb5;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.card:hover .title {
+	color: #00adb5;
+	filter: brightness(1.5);
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.card .title {
+	margin: 0;
+	font-size: 1.5rem;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.section {
+	font-size: 1.5rem;
+	font-weight: 700;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.search input {
+	color: #fff;
+	background-color: #1a1b1e;
+	border-radius: 25px;
+	margin-bottom: 1rem;
+}
+
+.top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.mid,
+.bottom {
+	margin-top: 1rem;
+}
+
+.state {
+	display: flex;
+	align-items: center;
+}
+
+.state span.online ~ * {
+	color: #32cd32;
+}
+
+.state span.offline ~ * {
+	color: #ff2400;
+}
+
+.online,
+.offline {
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+}
+
+.online {
+	background-color: #32cd32;
+}
+
+.offline {
+	background-color: #ff2400;
+}
+
+.bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+	line-height: 1.55;
+	padding: 2px 5px;
+	border-radius: 4px;
+	color: #1a1b1e;
+	background-color: rgba(248, 249, 250, 1);
+	font-size: 12px;
+}
+
+.empty {
+	text-align: center;
+	margin: 1rem 0;
+}
+
+.empty svg {
+	cursor: default;
+}
+
+.empty div {
+	margin-bottom: 1rem;
+}
+
+@media (max-width: 800px) {
+	.nav .description,
+	.specs {
+		display: none;
+	}
+
+	.modal {
+		width: 100%;
+	}
+
+	.resources {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.list > .column {
+		width: 100%;
+		max-width: 600px;
+	}
+
+	.list > .column:last-child {
+		order: 1;
+	}
+
+	.list > .column:first-child {
+		order: 2;
+	}
+
+	.grid,
+	.list {
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+	}
 }
