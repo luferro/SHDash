@@ -29,3 +29,16 @@ npm run build
 ```
 npm start
 ```
+
+## Author
+
+**Luís Ferro**
+
+-   [Github](https://github.com/luferro)
+-   [LinkedIn](https://www.linkedin.com/in/luis-ferro/)
+
+## License
+
+Copyright © 2022 [Luís Ferro](https://github.com/luferro)
+
+This project is licensed under the [MIT license](LICENSE).
