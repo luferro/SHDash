@@ -2,7 +2,8 @@
 
 Simple dashboard to start and stop self hosted game servers on portainer
 
-[![SHDash.png](https://i.postimg.cc/xThK9PNk/SHDash.png)](https://postimg.cc/KR7KNBNF)
+
+<img src="https://i.postimg.cc/xThK9PNk/SHDash.png" alt="Dashboard example" />
 
 ## Technologies
 
