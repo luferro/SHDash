@@ -72,7 +72,7 @@ export const getTickets = async (type: TicketType, page: number, limit: number, 
 };
 
 export const updateTicket = async (type: TicketType, title: string, status: TicketStatus) => {
-	const ticket = await ticketsModel.findOne({ type, title: { title: { $regex: new RegExp(title, 'i') } } });
+	const ticket = await ticketsModel.findOne({ type, title: { $regex: new RegExp(title, 'i') } });
 	if (!ticket) throw new Error(`There is no request for ${title}`);
 
 	const ticketInfo = {
