@@ -292,14 +292,6 @@
 	margin: 1rem 0;
 }
 
-.empty svg {
-	cursor: default;
-}
-
-.empty div {
-	margin-bottom: 1rem;
-}
-
 @media (max-width: 800px) {
 	.nav .description,
 	.specs {
