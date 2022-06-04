@@ -7,10 +7,10 @@ export const isPortainerTokenValid = async () => {
 	const session = await sessionModel.findOne({});
 	if (!session) return false;
 
-	const { exp } = jwt.decode(session.token) as JwtPayload;
-	if (!exp) return false;
+	const token = jwt.decode(session.token) as JwtPayload;
+	if (!token?.exp) return false;
 
-	return Date.now() <= exp * 1000;
+	return Date.now() <= token.exp * 1000;
 };
 
 export const getSession = async (req: NextApiRequest) => {
