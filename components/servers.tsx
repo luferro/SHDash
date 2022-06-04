@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import { useSession } from 'next-auth/react';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { ActionIcon, Input, Text, Image } from '@mantine/core';
-import Empty from './empty';
 import * as StringUtils from '../utils/string';
 import * as NotificationUtils from '../utils/notification';
 import { Action } from '../types/portainer';
@@ -90,7 +89,7 @@ const Servers = ({ filter, resources, containers }: ServersComponentProps) => {
 			/>
 			<div className={styles.grid}>
 				{data.length === 0 ? (
-					<Empty />
+					<Text className={styles.empty}>There is nothing here</Text>
 				) : (
 					data.map(({ id, name, status, address }) => (
 						<div className={styles.card} key={id}>

@@ -1,8 +1,7 @@
 import styles from '../styles/Home.module.css';
 import { useSession } from 'next-auth/react';
 import { useEffect, useState } from 'react';
-import { Chip, Group, Pagination, SegmentedControl, Table } from '@mantine/core';
-import Empty from './empty';
+import { Group, Pagination, SegmentedControl, Table, Text } from '@mantine/core';
 import * as NotificationUtils from '../utils/notification';
 import { Tickets } from '../types/response';
 import { TicketStatus } from '../types/ticket';
@@ -72,27 +71,23 @@ const RequestTable = () => {
 						</div>
 					</td>
 					{session?.user.isAdmin ? (
-						<td style={{ display: 'flex' }}>
+						<td style={{ display: 'table-cell' }}>
 							{REQUEST_STATUS.filter((newStatus) => isStatusAllowed(status, newStatus)).length === 0
 								? 'There are no options available'
 								: ''}
 							{REQUEST_STATUS.filter((newStatus) => isStatusAllowed(status, newStatus)).map(
 								(newStatus) => (
-									<Chip
+									<div
 										key={newStatus}
-										classNames={{ label: styles.badge }}
-										value={newStatus}
+										className={styles.badge}
 										onClick={() => handleStatusChange(title, newStatus)}
-										checked={false}
-										styles={{
-											label: {
-												color: getBadgeColor(newStatus),
-												borderColor: getBadgeColor(newStatus),
-											},
+										style={{
+											color: getBadgeColor(newStatus),
+											borderColor: getBadgeColor(newStatus),
 										}}
 									>
 										{newStatus}
-									</Chip>
+									</div>
 								),
 							)}
 						</td>
@@ -154,7 +149,7 @@ const RequestTable = () => {
 				</thead>
 				{rows.length > 0 ? <tbody>{rows}</tbody> : ''}
 			</Table>
-			{rows.length === 0 ? <Empty /> : ''}
+			{rows.length === 0 ? <Text className={styles.empty}>There is nothing here</Text> : ''}
 			<br />
 			<Pagination
 				className={styles.pagination}
